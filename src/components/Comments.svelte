@@ -1,6 +1,21 @@
 <script>
 
+  import uuid from "uuid"
   export let comments = [];
+
+  function addComment(e) {
+    const msg = e.target.text.value;
+    
+    if (msg.length > 3) {
+      const message = {
+        id: uuid,
+        text: msg,
+        username: "IsmaelJDz7"
+      }
+      comments = [...comments, message];
+      event.target.text.value = "";
+    }
+  }
 
 </script>
 
@@ -71,7 +86,7 @@
         </div>
     {/each}
     <div class="Comments-add">
-      <form>
+      <form on:submit|preventDefault={addComment}>
         <input
           type="text"
           class="Comments-input"

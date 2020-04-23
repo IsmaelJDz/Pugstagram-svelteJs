@@ -11,7 +11,7 @@ Esta es una aplicacion creada con el framework SvelteJs un clon de instagram per
 Requiere nodeJs
 
 - `npm install` para instalar las dependencias.
-- `npm run dev` para el entorno de desarrollo.
+- `npm run start` para el entorno de desarrollo.
 
 ## Licencia
 
